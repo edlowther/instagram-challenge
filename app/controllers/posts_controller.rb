@@ -4,10 +4,10 @@ class PostsController < ApplicationController
       @post = Post.new(post_params)
       @post.user = current_user
       @post.save
-      redirect_to @post
+      redirect_to user_posts_path
     else
       flash[:notice] = "Cannot post if not signed in"
-      redirect_to new_post_path
+      redirect_to new_user_post_path
     end
   end
 

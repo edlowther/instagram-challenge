@@ -13,3 +13,14 @@
 <p>
   <%= @post.description %>
 </p>
+
+<p>
+  <%= @post.likes.length %> like
+</p>
+
+<%= form_with scope: :like, url: likes_path, local: true do |form| %>
+  <p>
+    <%= form.hidden_field :post_id, :value => @post.id %>
+    <%= form.submit "Like" %>
+  </p>
+<% end %>

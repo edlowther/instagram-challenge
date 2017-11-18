@@ -2,7 +2,8 @@ require "application_system_test_case"
 
 class PostsTest < ApplicationSystemTestCase
   test "cannot post if not signed in" do
-    visit '/posts/new'
+    charlotte = User.first
+    visit '/users/' + charlotte.id.to_s + '/posts/new'
     fill_in 'headline', with: 'Testing, testing, 123'
     fill_in 'description', with: '456789'
     click_on 'Post...'
@@ -10,7 +11,8 @@ class PostsTest < ApplicationSystemTestCase
   end
   test "posts successfully if signed in" do
     sign_up
-    visit '/posts/new'
+    ed = User.last
+    visit '/users/' + ed.id.to_s + '/posts/new'
     fill_in 'headline', with: 'Testing, testing, 123'
     fill_in 'description', with: '456789'
     click_on 'Post...'
