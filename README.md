@@ -17,7 +17,7 @@ So I can remember the good times
 I want to be able to view the photos I have posted
 
 As a person
-So I can find out what is happening in other people\'s lives
+So I can find out what is happening in other people's lives
 I want to be able to view their photos
 
 As a person

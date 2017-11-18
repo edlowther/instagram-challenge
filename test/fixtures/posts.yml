@@ -9,3 +9,23 @@
 #
 # two: {}
 # column: value
+
+post_one:
+  headline: Amazingly interesting headline
+  description: Fascinating description
+  user: charlotte
+
+post_two:
+  headline: Somewhat interesting headline
+  description: Less than fascinating description
+  user: charlotte
+
+post_three:
+  headline: Rather dreary headline
+  description: Humdrum description
+  user: charlotte
+
+post_four:
+  headline: Absolute tedium
+  description: Total writer's block
+  user: charlotte

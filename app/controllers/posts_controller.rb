@@ -18,6 +18,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def index
+    @posts = Post.where(user_id: params[:user_id])
+  end
+
   private
   def post_params
     params.require(:post).permit(:headline, :description, :photo)

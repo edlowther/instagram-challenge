@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+  <div>
+    <p><%= post.headline %></p>
+    <p>By <%= post.user.email %></p>
+    <div class="image-container">
+      <img src="<%= post.photo.url %>" />
+    </div>
+    <p><%= post.description %></p>
+  </div>
+<% end %>
