@@ -2,6 +2,10 @@
   <%= @post.headline %>
 </h3>
 
+<p>
+  By <%= @post.user.email %>
+</p>
+
 <div class="image-container">
   <img src="<%= @post.photo.url %>" />
 </div>

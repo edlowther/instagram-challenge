@@ -1,9 +1,14 @@
 class PostsController < ApplicationController
   def create
-    @post = Post.new(post_params)
-    @post.save
-    p @post
-    redirect_to @post
+    if current_user
+      @post = Post.new(post_params)
+      @post.user = current_user
+      @post.save
+      redirect_to @post
+    else
+      flash[:notice] = "Cannot post if not signed in"
+      redirect_to new_post_path
+    end
   end
 
   def new
