@@ -15,7 +15,7 @@
 </p>
 
 <p>
-  <%= @post.likes.length %> like
+  <%= pluralize(@post.likes.length, 'like') %>
 </p>
 
 <%= form_with scope: :like, url: likes_path, local: true do |form| %>

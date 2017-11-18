@@ -6,6 +6,12 @@ class UsersTest < ApplicationSystemTestCase
     assert_text 'Welcome! You have signed up successfully'
   end
 
+  test "User can sign out" do
+    sign_up
+    click_on 'Logout'
+    assert_text 'Signed out successfully'
+  end
+
   test "User's posts are collated in one place" do
     charlotte = User.first
     visit '/users/' + charlotte.id.to_s + '/posts'

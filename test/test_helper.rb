@@ -15,10 +15,10 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-def sign_up
+def sign_up(email='ed@test.com', password='123456')
   visit '/users/sign_up'
-  fill_in 'Email', with: 'ed@test.com'
-  fill_in 'Password', with: '123456'
-  fill_in 'Password confirmation', with: '123456'
+  fill_in 'Email', with: email
+  fill_in 'Password', with: password
+  fill_in 'Password confirmation', with: password
   click_on 'Sign up'
 end
