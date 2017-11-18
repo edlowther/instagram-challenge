@@ -3,7 +3,7 @@ Instagram Challenge
 
 ## User stories
 
-```sh
+```
 As a person
 So I can share stuff that has happened in my life
 I want to be able to publish photos on a website
