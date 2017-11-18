@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'carrierwave', '~> 1.0'
+gem 'fog-aws'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
@@ -39,6 +40,7 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
   # Adds support for Capybara system testing and selenium driver
   gem 'pry'
   gem 'capybara', '~> 2.13'
