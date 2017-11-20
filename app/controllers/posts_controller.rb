@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.where(user_id: params[:user_id])
+    @posts = Post.where(user_id: params[:user_id]).reverse
   end
 
   private
